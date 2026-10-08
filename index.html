@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CHITRAKSHI | Store</title><link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header><a class="logo" href="#shop">CHITRAKSHI<span>MARBLE CRAFTS</span></a><nav><a href="#shop">Shop</a><a href="#about">About</a><button id="cartBtn">Cart <b id="count">0</b></button><button id="adminBtn">Admin</button></nav></header>
+<section class="hero"><div><small>HANDCRAFTED IN KISHANGARH, RAJASTHAN</small><h1>Timeless marble,<br><i>made by hand.</i></h1><p>Traditional marble kitchenware, décor and divine idols crafted with care.</p><a class="btn" href="#shop">Shop collection</a></div><div class="heroArt">CHITRAKSHI</div></section>
+<section id="shop" class="wrap"><div class="heading"><div><small>THE COLLECTION</small><h2>Shop our products</h2></div><div id="filters"></div></div><div id="products" class="grid"></div></section>
+<section id="about" class="about"><div class="wrap"><small>OUR STORY</small><h2>From Kishangarh, with craft.</h2><p>CHITRAKSHI brings Rajasthan's marble craftsmanship to modern homes through useful traditional products and timeless décor.</p></div></section>
+<footer>© 2026 CHITRAKSHI • Kishangarh, Rajasthan</footer>
+
+<div id="cart" class="overlay"><div class="panel"><button class="x" data-close="cart">×</button><h2>Your Cart</h2><div id="cartItems"></div><div class="total"><span>Total</span><b id="total">₹0</b></div><button class="btn wide" id="order">Order on WhatsApp</button></div></div>
+
+<div id="login" class="overlay"><div class="panel small"><button class="x" data-close="login">×</button><h2>Admin Login</h2><p class="muted">Demo admin access for this local website.</p><input id="adminPass" type="password" placeholder="Password"><button class="btn wide" id="loginBtn">Login</button><p id="loginMsg" class="error"></p></div></div>
+
+<div id="admin" class="overlay"><div class="panel adminPanel"><button class="x" data-close="admin">×</button><div class="adminHead"><div><small>STORE MANAGEMENT</small><h2>CHITRAKSHI Admin</h2></div><button id="logout">Logout</button></div>
+<div class="form"><h3 id="formTitle">Add Product</h3><input id="pName" placeholder="Product name"><div class="two"><input id="pPrice" type="number" placeholder="Price ₹"><select id="pCat"><option>Kitchen</option><option>Idols</option><option>Decor</option><option>Other</option></select></div><textarea id="pDesc" placeholder="Description"></textarea><input id="pImage" type="file" accept="image/*"><div id="preview"></div><div class="two"><input id="pTag" placeholder="Badge e.g. Bestseller"><input id="pStock" type="number" placeholder="Stock"></div><button class="btn" id="saveProduct">Publish Product</button><button class="ghost" id="cancelEdit" style="display:none">Cancel edit</button></div>
+<h3>Products</h3><div id="adminProducts"></div></div></div>
+<script src="app.js"></script></body></html>
