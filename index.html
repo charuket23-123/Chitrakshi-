@@ -1,21 +1,132 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CHITRAKSHI | Store</title><link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CHITRAKSHI | Home & Kitchen</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;color:#26352b;background:#fff}
+header{background:#244b38;color:white;padding:18px 5%;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.logo{font-size:24px;font-weight:bold;letter-spacing:2px}
+.logo small{display:block;font-size:11px;letter-spacing:3px;margin-top:5px}
+nav a{color:white;text-decoration:none;margin:8px;font-size:14px}
+.hero{padding:55px 6%;background:linear-gradient(120deg,#f6f0df,#dceadd);display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.hero div{flex:1;min-width:240px}
+.hero h1{font-size:clamp(34px,6vw,54px);margin:12px 0}
+.hero p{line-height:1.7;color:#536358}
+.art{text-align:center;font-size:90px}
+.btn{display:inline-block;background:#244b38;color:white;text-decoration:none;padding:13px 20px;border-radius:7px;margin-top:10px;font-weight:bold}
+section{padding:38px 5%}
+h2{font-size:28px;margin-top:0}
+.sub{color:#69756c;margin-top:-10px;margin-bottom:25px}
+.categories,.products{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.category{text-align:center;background:#f5f3eb;padding:22px 8px;border-radius:12px;font-weight:bold}
+.category span{display:block;font-size:38px;margin-bottom:10px}
+.products{grid-template-columns:repeat(3,1fr)}
+.product{border:1px solid #e5e8e1;border-radius:12px;overflow:hidden}
+.pic{background:#f3f4ee;min-height:140px;display:flex;align-items:center;justify-content:center;font-size:65px}
+.info{padding:14px}
+.info h3{margin:0 0 8px;font-size:17px}
+.info p{color:#68736b;font-size:13px;line-height:1.5}
+.price{font-size:19px;font-weight:bold}
+.order{display:block;background:#e4f2e5;color:#205b34;text-decoration:none;text-align:center;padding:11px 5px;border-radius:6px;font-size:13px;font-weight:bold;margin-top:12px}
+.about{background:#f6f4ed;line-height:1.8}
+.contact{background:#244b38;color:white;text-align:center}
+.contact p{line-height:1.7}
+footer{text-align:center;padding:20px;color:#657068;font-size:13px}
+@media(max-width:600px){.categories{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.pic{min-height:110px;font-size:48px}.info{padding:10px}.info h3{font-size:15px}.hero{padding:38px 5%}.art{font-size:65px}nav a{margin:4px}}
+</style>
 </head>
 <body>
-<header><a class="logo" href="#shop">CHITRAKSHI<span>MARBLE CRAFTS</span></a><nav><a href="#shop">Shop</a><a href="#about">About</a><button id="cartBtn">Cart <b id="count">0</b></button><button id="adminBtn">Admin</button></nav></header>
-<section class="hero"><div><small>HANDCRAFTED IN KISHANGARH, RAJASTHAN</small><h1>Timeless marble,<br><i>made by hand.</i></h1><p>Traditional marble kitchenware, décor and divine idols crafted with care.</p><a class="btn" href="#shop">Shop collection</a></div><div class="heroArt">CHITRAKSHI</div></section>
-<section id="shop" class="wrap"><div class="heading"><div><small>THE COLLECTION</small><h2>Shop our products</h2></div><div id="filters"></div></div><div id="products" class="grid"></div></section>
-<section id="about" class="about"><div class="wrap"><small>OUR STORY</small><h2>From Kishangarh, with craft.</h2><p>CHITRAKSHI brings Rajasthan's marble craftsmanship to modern homes through useful traditional products and timeless décor.</p></div></section>
-<footer>© 2026 CHITRAKSHI • Kishangarh, Rajasthan</footer>
+<header>
+<div class="logo">CHITRAKSHI<small>HOME & KITCHEN</small></div>
+<nav>
+<a href="#categories">Categories</a>
+<a href="#products">Products</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
 
-<div id="cart" class="overlay"><div class="panel"><button class="x" data-close="cart">×</button><h2>Your Cart</h2><div id="cartItems"></div><div class="total"><span>Total</span><b id="total">₹0</b></div><button class="btn wide" id="order">Order on WhatsApp</button></div></div>
+<div class="hero">
+<div>
+<p><b>WELCOME TO CHITRAKSHI</b></p>
+<h1>Make Your Home Beautiful</h1>
+<p>Discover useful home and kitchen essentials for everyday living. Explore our collection and order directly through WhatsApp.</p>
+<a class="btn" href="#products">Explore Products</a>
+</div>
+<div class="art">🏡 🪴 🍳</div>
+</div>
 
-<div id="login" class="overlay"><div class="panel small"><button class="x" data-close="login">×</button><h2>Admin Login</h2><p class="muted">Demo admin access for this local website.</p><input id="adminPass" type="password" placeholder="Password"><button class="btn wide" id="loginBtn">Login</button><p id="loginMsg" class="error"></p></div></div>
+<section id="categories">
+<h2>Shop by Category</h2>
+<p class="sub">Useful essentials for every corner of your home.</p>
+<div class="categories">
+<div class="category"><span>🍳</span>Kitchen Tools</div>
+<div class="category"><span>🫙</span>Storage Products</div>
+<div class="category"><span>🧹</span>Cleaning Items</div>
+<div class="category"><span>🧺</span>Home Organizers</div>
+<div class="category"><span>🥤</span>Kitchen Accessories</div>
+<div class="category"><span>🏠</span>Home Essentials</div>
+</div>
+</section>
 
-<div id="admin" class="overlay"><div class="panel adminPanel"><button class="x" data-close="admin">×</button><div class="adminHead"><div><small>STORE MANAGEMENT</small><h2>CHITRAKSHI Admin</h2></div><button id="logout">Logout</button></div>
-<div class="form"><h3 id="formTitle">Add Product</h3><input id="pName" placeholder="Product name"><div class="two"><input id="pPrice" type="number" placeholder="Price ₹"><select id="pCat"><option>Kitchen</option><option>Idols</option><option>Decor</option><option>Other</option></select></div><textarea id="pDesc" placeholder="Description"></textarea><input id="pImage" type="file" accept="image/*"><div id="preview"></div><div class="two"><input id="pTag" placeholder="Badge e.g. Bestseller"><input id="pStock" type="number" placeholder="Stock"></div><button class="btn" id="saveProduct">Publish Product</button><button class="ghost" id="cancelEdit" style="display:none">Cancel edit</button></div>
-<h3>Products</h3><div id="adminProducts"></div></div></div>
-<script src="app.js"></script></body></html>
+<section id="products" style="background:#fcfcf8">
+<h2>Our Products</h2>
+<p class="sub">Contact us for product details and availability.</p>
+<div class="products">
+
+<div class="product">
+<div class="pic">🥄</div>
+<div class="info"><h3>Kitchen Utensil Set</h3><p>Useful tools for everyday cooking.</p><div class="price">₹299</div>
+<a class="order" href="https://wa.me/918690012149?text=I%20want%20Kitchen%20Utensil%20Set">Order on WhatsApp</a></div>
+</div>
+
+<div class="product">
+<div class="pic">🫙</div>
+<div class="info"><h3>Storage Container Set</h3><p>Organize kitchen essentials neatly.</p><div class="price">₹399</div>
+<a class="order" href="https://wa.me/918690012149?text=I%20want%20Storage%20Container%20Set">Order on WhatsApp</a></div>
+</div>
+
+<div class="product">
+<div class="pic">🧺</div>
+<div class="info"><h3>Multipurpose Organizer</h3><p>Handy storage for home use.</p><div class="price">₹249</div>
+<a class="order" href="https://wa.me/918690012149?text=I%20want%20Multipurpose%20Organizer">Order on WhatsApp</a></div>
+</div>
+
+<div class="product">
+<div class="pic">🧴</div>
+<div class="info"><h3>Oil Dispenser</h3><p>A convenient kitchen accessory.</p><div class="price">₹199</div>
+<a class="order" href="https://wa.me/918690012149?text=I%20want%20Oil%20Dispenser">Order on WhatsApp</a></div>
+</div>
+
+<div class="product">
+<div class="pic">🧽</div>
+<div class="info"><h3>Cleaning Brush Set</h3><p>Practical tools for routine cleaning.</p><div class="price">₹149</div>
+<a class="order" href="https://wa.me/918690012149?text=I%20want%20Cleaning%20Brush%20Set">Order on WhatsApp</a></div>
+</div>
+
+<div class="product">
+<div class="pic">🪝</div>
+<div class="info"><h3>Space-Saving Hooks</h3><p>Simple home utility accessories.</p><div class="price">₹99</div>
+<a class="order" href="https://wa.me/918690012149?text=I%20want%20Space-Saving%20Hooks">Order on WhatsApp</a></div>
+</div>
+
+</div>
+</section>
+
+<section class="about">
+<h2>About CHITRAKSHI</h2>
+<p>Welcome to CHITRAKSHI Home & Kitchen. We aim to bring useful products to your everyday life. Browse our collection and message us for current stock, pricing and delivery information.</p>
+</section>
+
+<section id="contact" class="contact">
+<h2>Contact Us</h2>
+<p>Have a question about a product? We are happy to help.</p>
+<a class="btn" style="background:white;color:#244b38" href="https://wa.me/918690012149">Chat on WhatsApp</a>
+</section>
+
+<footer>© 2026 CHITRAKSHI Home & Kitchen</footer>
+</body>
+</html>
